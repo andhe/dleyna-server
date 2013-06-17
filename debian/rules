@@ -9,5 +9,8 @@
 # Uncomment this to turn on verbose mode.
 #export DH_VERBOSE=1
 
+# Make dpkg-gensymbols fail if symbols file updates are needed
+export DPKG_GENSYMBOLS_CHECK_LEVEL=4
+
 %:
 	dh $@ --with autoreconf
